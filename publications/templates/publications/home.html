@@ -1,0 +1,7 @@
+{% extends 'publications/base.html' %}
+{% block content %}
+<span>Hello, {{request.user}}</span>
+<span><a href="{% url 'logout' %}">Sair</a></span>
+<h1>Home</h1>
+<a href="{% url 'login' %}">Entre agora</a>
+{% endblock %}
