@@ -5,6 +5,13 @@
 	<title>Planeja Tere</title>
 </head>
 <body>
+	<header>
+		<nav>
+			<img>
+			<li><a href="{% url 'home' %}">Home</a></li>
+			<li><a href="{% url 'publications' %}">Publications</a></li>
+		</nav>
+	</header>
 	{% block content %}
 
 	{% endblock %}
