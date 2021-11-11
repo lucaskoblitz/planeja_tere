@@ -1,0 +1,22 @@
+li {
+	display: inline-block;
+	padding-bottom: 20px;
+}
+
+input {
+	width: 20%;
+	display: block;
+	padding: 6px 12px;
+	margin: 8px 0px;
+
+}
+
+.bg-gray {
+	background-color: #e7e9eb;
+	padding: 20px;
+	border-radius: 5px;
+}
+
+#post-box {
+	height: 60px;
+}

@@ -1,0 +1,6 @@
+{% if group == 'Associados' %}
+	<p>Você já é associado ao Planeja Terê!</p>
+{% else %}
+	<p>Você é da {{group}}, já tem permissões maiores que um associado!</p>
+{% endif %}
+<a href="{% url 'home' %}">Página inicial</a>

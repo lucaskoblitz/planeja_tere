@@ -1,7 +1,9 @@
 {% extends 'publications/base.html' %}
 {% block content %}
-<span>Hello, {{request.user}}</span>
+<span>Olá, {{request.user}}</span>
 <span><a href="{% url 'logout' %}">Sair</a></span>
 <h1>Home</h1>
+{% if request.user.is_authenticated == False %}
 <a href="{% url 'login' %}">Entre agora</a>
+{% endif %}
 {% endblock %}

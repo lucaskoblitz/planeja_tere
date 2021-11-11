@@ -1,15 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<title>Planeja Tere</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
 </head>
 <body>
 	<header>
 		<nav>
 			<img>
 			<li><a href="{% url 'home' %}">Home</a></li>
-			<li><a href="{% url 'publications' %}">Publications</a></li>
+			<li><a href="{% url 'publications' %}">Publicações</a></li>
+			<li><a href="{% url 'associe' %}">Associe-se!</a></li>
+			<li><a href="{% url 'solicitarpublicação' %}">Solicitar Publicação</a></li>
+			{% if request.user.is_staff %}
+			<li><a href="">Requested Publications</a></li>
+			{% endif %}
 		</nav>
 	</header>
 	{% block content %}

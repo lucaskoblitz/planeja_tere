@@ -1,0 +1,18 @@
+{% extends 'publications/base.html' %}
+{% block content %}
+<form method="POST" action="">
+	{% csrf_token %}
+
+	<p>Título:</p>
+	{{ form.title }}
+	
+	<p>Publicação:</p>
+	{{ form.post }}
+
+	<p>Autor:</p>
+	{{ form.author }}
+
+	<input type="submit" name="createwaitinpost" value='Solicitar'>
+</form>
+<div>{{form.errors}}</div>
+{% endblock %}
